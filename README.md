@@ -1,4 +1,4 @@
-# TFlite-Rasprypy
+# TFlite-Rasperry-pi
 convertion keras model to tflite, load this tflite model and inferance 
 This Python script performs image classification using a TensorFlow Lite (TFLite) model. It takes an image file, a TFLite model, and a label file as inputs, processes the image, runs it through the model, and outputs the top-k predicted labels with their confidence scores. Below, I’ll break down the code in detail, explaining each section, its purpose, and how it works.
 
