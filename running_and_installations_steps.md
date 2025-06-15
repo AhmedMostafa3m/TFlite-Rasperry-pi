@@ -18,19 +18,25 @@ cd /mnt/d/programing/ML_and_DL/deployment_DL/tflite-Rasperry-pi
 sudo apt update
 
 # Install python3-venv if you don't have it (needed for virtual environments)
+```
 sudo apt install python3-venv
-
+```
 # Create a new virtual environment (e.g., named 'wsl_tf_env')
+```
 python3 -m venv wsl_tf_env
-
+```
 # Activate the virtual environment
+```
 source wsl_tf_env/bin/activate
+```
 (You should see (wsl_tf_env) appear before your prompt, indicating it's active.)
 
 4. Install tflite_runtime:
+```
 (wsl_tf_env) pip install tflite_runtime
-
+```
 5. Run your Python Script:
 Now, execute your classify.py script. Make sure your dog.jpg file is also accessible in that directory.
+```
 (wsl_tf_env) python3 classify.py --filename dog.jpg --model_path mobilenet_v1_1.0_224_quant.tflite --label_path labels_mobilenet_quant_v1_224.txt
-
+```
