@@ -46,7 +46,12 @@ img = Image.open(filename).convert('RGB')
 
 # Get input size
 input_shape = input_details[0]['shape']
-size = input_shape[:2] if len(input_shape) == 3 else input_shape[1:3]
+# Extract the width and height, and ensure it's a tuple (width, height)
+# input_shape[2] is width, input_shape[1] is height
+target_width = input_shape[2]
+target_height = input_shape[1]
+size = (target_width, target_height) # Create a tuple for PIL.Image.resize
+# size = input_shape[:2] if len(input_shape) == 3 else input_shape[1:3]
 
 # Preprocess image
 img = img.resize(size)
